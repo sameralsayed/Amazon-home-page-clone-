@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Store – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Modern responsive e-commerce landing page with deals, categories, and featured products." />
+  <meta name="keywords" content="ecommerce, online store, deals, shopping, products" />
+  <meta name="author" content="SAMER SAEID" />
+
+  <!-- Open Graph for SEO -->
+  <meta property="og:title" content="My Store – Home" />
+  <meta property="og:description" content="Modern responsive e-commerce landing page with deals, categories, and featured products." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:image" content="https://example.com/preview.png" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "My Store",
+    "url": "https://example.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://example.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Top nav -->
+  <header class="shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark main-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <!-- Simple SVG logo (not Amazon’s) -->
+          <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="#ff9900" />
+            <path d="M25 55 Q50 80 75 55" stroke="#111" stroke-width="6" fill="none" stroke-linecap="round" />
+            <circle cx="38" cy="40" r="4" fill="#111" />
+            <circle cx="62" cy="40" r="4" fill="#111" />
+          </svg>
+          <span class="ms-2 fw-bold">My Store</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <form class="d-flex flex-grow-1 mx-lg-3 my-2 my-lg-0 search-form">
+            <select class="form-select search-category d-none d-md-block">
+              <option selected>All</option>
+              <option>Books</option>
+              <option>Electronics</option>
+              <option>Fashion</option>
+              <option>Home</option>
+            </select>
+            <input
+              class="form-control search-input"
+              type="search"
+              placeholder="Search products"
+              aria-label="Search"
+            />
+            <button class="btn search-btn" type="submit">
+              <span class="visually-hidden">Search</span>
+              🔍
+            </button>
+          </form>
+
+          <ul class="navbar-nav ms-lg-3 mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link small-text" href="#">Hello, sign in<br /><span class="fw-bold">Account &amp; Lists</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link small-text" href="#">Returns<br /><span class="fw-bold">&amp; Orders</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart-link d-flex align-items-center" href="#">
+                🛒
+                <span class="badge bg-warning text-dark ms-1 cart-count">0</span>
+                <span class="ms-1 fw-bold d-none d-md-inline">Cart</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Secondary nav -->
+    <div class="sub-nav text-white">
+      <div class="container-fluid d-flex flex-wrap align-items-center">
+        <button class="btn btn-link text-white p-0 me-3 d-flex align-items-center">
+          ☰ <span class="ms-1 fw-bold">All</span>
+        </button>
+        <a href="#" class="sub-nav-link">Today's Deals</a>
+        <a href="#" class="sub-nav-link">Customer Service</a>
+        <a href="#" class="sub-nav-link">Registry</a>
+        <a href="#" class="sub-nav-link">Gift Cards</a>
+        <a href="#" class="sub-nav-link">Sell</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / carousel -->
+  <main>
+    <section class="hero-section position-relative">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active hero-slide hero-slide-1">
+            <div class="hero-overlay d-flex align-items-end">
+              <div class="container mb-4">
+                <div class="hero-message">
+                  <p>Welcome to My Store – discover daily deals and top picks tailored for you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item hero-slide hero-slide-2">
+            <div class="hero-overlay d-flex align-items-end">
+              <div class="container mb-4">
+                <div class="hero-message">
+                  <p>Shop electronics, fashion, home essentials, and more in one place.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item hero-slide hero-slide-3">
+            <div class="hero-overlay d-flex align-items-end">
+              <div class="container mb-4">
+                <div class="hero-message">
+                  <p>Fast, reliable delivery and curated collections for every season.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Floating card row -->
+      <div class="container hero-card-row">
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card home-card h-100">
+              <h2 class="card-title">Top picks for you</h2>
+              <div class="card-body p-0">
+                <div class="home-card-grid">
+                  <div class="home-card-item">Headphones</div>
+                  <div class="home-card-item">Smartwatch</div>
+                  <div class="home-card-item">Laptop</div>
+                  <div class="home-card-item">Camera</div>
+                </div>
+              </div>
+              <a href="#" class="card-link">See more</a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card home-card h-100">
+              <h2 class="card-title">Home &amp; kitchen</h2>
+              <div class="card-body p-0">
+                <div class="home-card-grid">
+                  <div class="home-card-item">Cookware</div>
+                  <div class="home-card-item">Decor</div>
+                  <div class="home-card-item">Storage</div>
+                  <div class="home-card-item">Lighting</div>
+                </div>
+              </div>
+              <a href="#" class="card-link">Explore home</a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card home-card h-100">
+              <h2 class="card-title">Fashion deals</h2>
+              <div class="card-body p-0">
+                <div class="home-card-grid">
+                  <div class="home-card-item">Shoes</div>
+                  <div class="home-card-item">Jackets</div>
+                  <div class="home-card-item">Accessories</div>
+                  <div class="home-card-item">Bags</div>
+                </div>
+              </div>
+              <a href="#" class="card-link">Shop fashion</a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card home-card h-100 text-center">
+              <h2 class="card-title">Sign in for best experience</h2>
+              <button class="btn btn-warning w-100 mb-2 mt-2">Sign in securely</button>
+              <p class="small mb-0">
+                New customer?
+                <a href="#">Start here.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product rows -->
+    <section class="container my-4">
+      <div class="row g-3">
+        <div class="col-12">
+          <div class="card product-row-card">
+            <div class="card-body">
+              <h2 class="card-title mb-3">Deals inspired by your browsing</h2>
+              <div class="product-row d-flex flex-nowrap overflow-auto">
+                <div class="product-card">
+                  <div class="product-img placeholder-img">IMG</div>
+                  <div class="product-title">Wireless Headphones</div>
+                  <div class="product-price">$59.99</div>
+                </div>
+                <div class="product-card">
+                  <div class="product-img placeholder-img">IMG</div>
+                  <div class="product-title">Smart Speaker</div>
+                  <div class="product-price">$39.99</div>
+                </div>
+                <div class="product-card">
+                  <div class="product-img placeholder-img">IMG</div>
+                  <div class="product-title">4K Monitor</div>
+                  <div class="product-price">$249.99</div>
+                </div>
+                <div class="product-card">
+                  <div class="product-img placeholder-img">IMG</div>
+                  <div class="product-title">Mechanical Keyboard</div>
+                  <div class="product-price">$89.99</div>
+                </div>
+                <div class="product-card">
+                  <div class="product-img placeholder-img">IMG</div>
+                  <div class="product-title">Gaming Mouse</div>
+                  <div class="product-price">$29.99</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card product-row-card">
+            <div class="card-body">
+              <h2 class="card-title mb-3">Popular in fashion</h2>
+              <div class="product-row d-flex flex-nowrap overflow-auto">
+                <div class="product-card">
+                  <div class="product-img placeholder-img">IMG</div>
+                  <div class="product-title">Men's Sneakers</div>
+                  <div class="product-price">$49.99</div>
+                </div>
+                <div class="product-card">
+                  <div class="product-img placeholder-img">IMG</div>
+                  <div class="product-title">Women's Jacket</div>
+                  <div class="product-price">$79.99</div>
+                </div>
+                <div class="product-card">
+                  <div class="product-img placeholder-img">IMG</div>
+                  <div class="product-title">Backpack</div>
+                  <div class="product-price">$39.99</div>
+                </div>
+                <div class="product-card">
+                  <div class="product-img placeholder-img">IMG</div>
+                  <div class="product-title">Sunglasses</div>
+                  <div class="product-price">$19.99</div>
+                </div>
+                <div class="product-card">
+                  <div class="product-img placeholder-img">IMG</div>
+                  <div class="product-title">Watch</div>
+                  <div class="product-price">$129.99</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to top -->
+    <div class="back-to-top text-center py-3">
+      <a href="#" class="back-to-top-link">Back to top</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer text-white">
+    <div class="footer-top py-4">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <h5>Get to Know Us</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Our Services</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h5>Make Money</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Sell products</a></li>
+              <li><a href="#">Affiliate program</a></li>
+              <li><a href="#">Advertise</a></li>
+              <li><a href="#">Partner with us</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h5>Payment Products</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Credit cards</a></li>
+              <li><a href="#">Gift cards</a></li>
+              <li><a href="#">Reload balance</a></li>
+              <li><a href="#">Currency converter</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h5>Let Us Help You</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Your account</a></li>
+              <li><a href="#">Shipping rates</a></li>
+              <li><a href="#">Returns &amp; replacements</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <div class="d-flex align-items-center mb-2 mb-md-0">
+            <svg width="32" height="32" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="48" fill="#ff9900" />
+              <path d="M25 55 Q50 80 75 55" stroke="#111" stroke-width="6" fill="none" stroke-linecap="round" />
+            </svg>
+            <span class="ms-2 fw-bold">My Store</span>
+          </div>
+          <div class="footer-meta small text-center text-md-end">
+            <div>
+              SAMER SAEID – <span>Made by ♥️</span>
+              <a href="https://bio.link/samer" target="_blank" rel="noopener noreferrer">https://bio.link/samer</a>
+            </div>
+            <div>Copyright SAMER SAEID</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
